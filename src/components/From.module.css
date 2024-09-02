@@ -10,7 +10,7 @@
   /* border: 1px solid red; */
   position: relative;
   z-index: 100;
-  box-shadow: 0 0 0 5px white;;
+  box-shadow: 0 0 0 5px rgb(255, 255, 255);
 }
 .form button{
   width: 100%;
