@@ -121,46 +121,47 @@ export default function Form(): JSX.Element {
         <div className={c.title}>Consumption Meter Reading
         <div className={c.readingTime}>Last reading: {readingTime}</div>
         </div>
-        
-        <div className={c.inputAndUploaderCont}>
-          <div className={c.inputs}>
-            <label>Customer Code:</label>
-            <input 
-              className={c.input} 
-              type='text' 
-              name='customerCode' 
-              required 
-              onChange={(e) => setCustomerCode(e.target.value)}
-              value={customerCode}
-            />
-            <label htmlFor="utility">Choose Utility:</label>
-            <select 
-              id="utility" 
-              name="utility" 
-              className={c.select}
-              onChange={(e) => setMeasureType(e.target.value)}
-            >
-                <option value="GAS">GAS</option>
-                <option value="WATER">WATER</option>
-            </select>
+        <div className={c.contentAll}>
+          <div className={c.inputAndUploaderCont}>
+            <div className={c.inputs}>
+              <label>Customer Code:</label>
+              <input 
+                className={c.input} 
+                type='text' 
+                name='customerCode' 
+                required 
+                onChange={(e) => setCustomerCode(e.target.value)}
+                value={customerCode}
+              />
+              <label htmlFor="utility">Choose Utility:</label>
+              <select 
+                id="utility" 
+                name="utility" 
+                className={c.select}
+                onChange={(e) => setMeasureType(e.target.value)}
+              >
+                  <option value="GAS">GAS</option>
+                  <option value="WATER">WATER</option>
+              </select>
+            </div>
+            <Uploader 
+              action="uload url"
+              multiple
+              onChange={handleChange}
+              autoUpload={false}
+              className={c.btnCont}
+              >
+                <div className={c.btnCont}>
+                  <Button>Select files... </Button>
+                </div>
+            </Uploader>
           </div>
-          <Uploader 
-            action="uload url"
-            multiple
-            onChange={handleChange}
-            autoUpload={false}
-            className={c.btnCont}
-            >
-              <div className={c.btnCont}>
-                 <Button>Select files... </Button>
-              </div>
-          </Uploader>
+          <div className={c.uploadBtn}><Button type='submit'>Upload files</Button></div>
         </div>
-      <div className={c.uploadBtn}><Button type='submit'>Upload files</Button></div>
-      <div className={c.readDetails}>
-       <h4>Read Details:</h4>
-       <p>Measured Value: <span className={c.measureValue}>{readDetails.measure_value}</span></p>
-       {/* <p>Measure UUID: {readDetails.measure_uuid}</p> */}
+        <div className={c.readDetails}>
+        <h4>Read Details:</h4>
+        <p>Measured Value: <span className={c.measureValue}>{readDetails.measure_value}</span></p>
+        {/* <p>Measure UUID: {readDetails.measure_uuid}</p> */}
       </div>
       </form>
     </div>

@@ -7,7 +7,6 @@
   flex-grow: 1;
   padding: 20px;
   text-align: center;
-  background-color: #444;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,10 +15,6 @@
   flex-shrink: 0;
   background-color: #9e9e9e;
   padding: 10px;
-}
-.btnCont{
-  display: flex;
-  border: 1px solid red;
 }
 .rs-uploader-file-item-btn-remove .rs-btn-close{
   color: white !important;

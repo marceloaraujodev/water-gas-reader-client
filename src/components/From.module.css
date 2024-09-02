@@ -10,7 +10,7 @@
   position: relative;
   z-index: 100;
   box-shadow: 0 0 0 5px rgb(255, 255, 255);
-  background-color: rgb(158, 157, 157);
+  background-color: rgb(255, 255, 255);
 }
 .form button{
   width: 100%;
@@ -25,11 +25,17 @@
   border-top-right-radius: 5px;
   z-index: 2;
 }
+.contentAll{
+  background-color: rgb(237, 236, 236);
+  border-radius: 10px;
+  margin: 20px 0;
+}
 .inputAndUploaderCont{
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 5px;
+  color: rgb(91, 91, 91);
 }
 .inputs{
   display: flex;
@@ -40,21 +46,22 @@
 .input,
 .select{
   width: 100%;
-  /* margin: 0 auto; */
   height: 30px;
   color: black;
 }
 .select{
   margin-bottom: 10px;
 }
-
 .uploadBtn{
   padding: 5px;
- margin-top: 10px;
+  margin: 10px 0;
+}
+.uploadBtn button:hover{
+  color: white;
+  background-color: rgb(75, 189, 255);
 }
 .readDetails{
   text-align: left;
-  margin-top: 25px;
   padding: 5px;
   background-color: rgb(75, 189, 255);
   border-bottom-left-radius: 5px;
@@ -65,7 +72,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 1.1rem;
-  color: greenyellow;
+  /* color: greenyellow; */
 }
 .readingTime{
   font-size: .8rem;

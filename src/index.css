@@ -7,7 +7,7 @@ html, body {
   height: 100%;
 }
 body{
-  background-color: #242424;
+  background-color: #343131;
   /* border: 1px solid red; */
   color: white;
   min-height: 100vh;
@@ -18,30 +18,12 @@ body{
   flex-direction: column;
 }
 .rs-uploader-file-item-btn-remove.rs-btn-close {
-  color: #ff5733 !important; /* Change text color, use !important to override existing styles */
-  background: transparent !important; /* If needed, ensure button background is transparent */
+  color: #ff5733 !important; 
 }
 .rs-uploader-file-items{
   /* background-color: rgb(226, 225, 225); */
   border-radius: 5px;
 }
-/* .rs-uploader-file-items{
-  color: white;
-}
-.rs-uploader-file-items, 
-.rs-uploader-file-item,
-.rs-uploader-file-item-title {
-  color: white;
-  border-radius: 5px;
-  transition: border-radius 0.3s linear;
-}
-.rs-uploader-file-items:hover, 
-.rs-uploader-file-item:hover {
-  border-radius: 5px; 
-  transition: all 0.3s linear;
-  color: black;
-} */
-
 
 .rs-uploader-file-items,
 .rs-uploader-file-item,
@@ -51,14 +33,6 @@ body{
   color: white !important; /* Set the starting color */
   border-radius: 5px;
 }
-/* .rs-uploader-file-items:hover,
-.rs-uploader-file-item:hover,
-.rs-uploader-file-item-title:hover,
-.rs-uploader-file-item-size:hover
- {
-  color: rgb(0, 0, 0) !important; 
-    transition: color 0.3s linear; 
-} */
 
 /* Hover effect on parent elements to change text color */
 .rs-uploader-file-items:hover .rs-uploader-file-item,
@@ -69,4 +43,9 @@ body{
   color: black !important; /* Change text color to black when parent is hovered */
   transition: color 0.3s linear; /* Smooth color transition */
   border-radius: 5px;
+}
+.rs-btn:hover,
+.rs-btn-default:hover{
+  background-color: rgb(75, 189, 255);
+  color: white;
 }
