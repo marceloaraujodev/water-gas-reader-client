@@ -37,17 +37,28 @@ function dateString(): string {
   return dateToString
 }
 
+
+
 export default function Form(): JSX.Element {
   const [fileList, setFileList] = useState<FileType[]>([]);
   const [customerCode, setCustomerCode] = useState<string>('');
   const [measureType, setMeasureType] = useState<string>('GAS');
-  const [readingTime, setReadingTime] = useState('19:00');
+  const [readingTime, setReadingTime] = useState<string>('');
   const [readDetails, setReadDetails] = useState<ResponseRead>({
     image_url: '',
     measure_value: 0,
     measure_uuid: '',
     message: ''
   })
+
+  function time(): void{
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    setReadingTime(`${hours}:${minutes}`)
+    console.log(`${hours}:${minutes}`, typeof hours, typeof minutes)
+  }
+ 
   
   function handleChange(files: FileType[]): void{
     const updatedFileList: FileType[] = [];
@@ -88,6 +99,7 @@ export default function Form(): JSX.Element {
       console.log('success')
       console.log(res)
       setReadDetails(res.data) // update readDetails state with response data
+      time();
     } else {
       console.log('error')
     }
@@ -98,6 +110,7 @@ export default function Form(): JSX.Element {
 
   return (
     <div>
+      <button onClick={time}>click</button>
       <form className={c.form} onSubmit={handleSubmit}>
         <div className={c.title}>Consumption Meter Reading
         <div className={c.readingTime}>Last reading: {readingTime}</div>
