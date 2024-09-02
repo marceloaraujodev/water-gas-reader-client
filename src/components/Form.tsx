@@ -88,7 +88,7 @@ export default function Form(): JSX.Element {
 
     console.log(fileList[0])
     // submit form data
-    const res = await axios.post('http://localhost:3000/api/v1/upload', {
+    const res = await axios.post('https://water-gas-reader.onrender.com/api/v1/upload', {
       image: fileList[0].base64String,
       customer_code: customerCode,
       measure_datetime: dateString(),
