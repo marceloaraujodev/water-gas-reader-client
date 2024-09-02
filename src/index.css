@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body{
+  background-color: #242424;
+  /* border: 1px solid red; */
+  color: white;
+  min-height: 100vh;
+}
+#root{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
