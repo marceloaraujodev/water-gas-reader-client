@@ -110,7 +110,6 @@ export default function Form(): JSX.Element {
 
   return (
     <div>
-      <button onClick={time}>click</button>
       <form className={c.form} onSubmit={handleSubmit}>
         <div className={c.title}>Consumption Meter Reading
         <div className={c.readingTime}>Last reading: {readingTime}</div>
