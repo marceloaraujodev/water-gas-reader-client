@@ -87,9 +87,7 @@ export default function Form(): JSX.Element {
     e.preventDefault();
 
     console.log(fileList[0])
-    // submit form data
-
-    const options: {
+    const payload: {
       image: string;
       customer_code: string;
       measure_datetime: string;
@@ -100,10 +98,9 @@ export default function Form(): JSX.Element {
       measure_datetime: dateString(),
       measure_type: measureType
     }
-
-    console.log(options);
-    
-    const res = await axios.post('https://water-gas-reader.onrender.com/api/v1/upload', options)
+    // submit form data
+    // const res = await axios.post('http://localhost:3000/api/v1/upload', payload)
+    const res = await axios.post('https://water-gas-reader.onrender.com/api/v1/upload', payload)
 
     if(res.status === 200){
       console.log('success')
@@ -159,12 +156,12 @@ export default function Form(): JSX.Element {
               </div>
           </Uploader>
         </div>
-        <div className={c.uploadBtn}><Button type='submit'>Upload files</Button></div>
-        <div className={c.readDetails}>
-        <h4>Read Details:</h4>
-        <p>Measured Value: <span className={c.measureValue}>{readDetails.measure_value}</span></p>
-        {/* <p>Measure UUID: {readDetails.measure_uuid}</p> */}
-        </div>
+      <div className={c.uploadBtn}><Button type='submit'>Upload files</Button></div>
+      <div className={c.readDetails}>
+       <h4>Read Details:</h4>
+       <p>Measured Value: <span className={c.measureValue}>{readDetails.measure_value}</span></p>
+       {/* <p>Measure UUID: {readDetails.measure_uuid}</p> */}
+      </div>
       </form>
     </div>
   )

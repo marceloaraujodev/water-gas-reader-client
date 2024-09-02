@@ -21,3 +21,6 @@
   display: flex;
   border: 1px solid red;
 }
+.rs-uploader-file-item-btn-remove .rs-btn-close{
+  color: white !important;
+}
